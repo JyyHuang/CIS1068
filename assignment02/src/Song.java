@@ -1,9 +1,10 @@
 /*Joey Huang
+ * CIS1068
  * Section 003
  * 09/08/2023
  * Assignment 2. Get You a Cat
  * 
- * 
+ * This program prints verses from a song called Bought Me a Cat.
  */
 
 public class Song {
@@ -15,7 +16,7 @@ public class Song {
     public static void animalSound(String animal, String sound) {
         String animalUpperCased = animal.substring(0, 1).toUpperCase() + animal.substring(1);
         if (animal.toLowerCase() != "cat") {
-            System.out.printf("%s goes %s, %s.\n", animalUpperCased, sound, sound);
+            System.out.printf("%s goes %s, %s,\n", animalUpperCased, sound, sound);
         } else {
             System.out.printf("%s goes %s.\n", animalUpperCased, sound, sound);
         }
