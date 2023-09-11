@@ -1,3 +1,10 @@
+// Joey Huang
+// CIS1068 Section 003
+// 09/11/2023
+// Lab2. In lab assignment.
+
+// This program refactors the receipt program shown in lecture by replacing it with methods.
+
 public class RefactorReceipt {
 
     private static double tax(double subtotal, double tax_rate) {
