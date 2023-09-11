@@ -11,12 +11,16 @@ public class RefactorReceipt {
     private static String receipt(double subtotal, double tax, double tip, double total) {
         return String.format("Subtotal: %s%nTax: %s%nTip: %s%nTotal: %s", subtotal, tax, tip, total);
     }
+
+    private static double total(double subtotal, double tax, double tip) {
+        return subtotal + tip + tax;
+    }
     
     public static void main(String[] args) {
         double subtotal = 38 + 40 + 30;
         double tax = tax(subtotal, 0.08);
         double tip = tip(subtotal, 0.2);
-        double total = subtotal + tax + tip;
+        double total = total(subtotal, tax, tip);
         System.out.println(receipt(subtotal, tax, tip, total));
         
     }
