@@ -1,3 +1,4 @@
+package assignment02;
 /*Joey Huang
  * CIS1068
  * Section 003
