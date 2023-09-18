@@ -1,11 +1,11 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        String a = new String("hello");
+        Scanner scanner = new Scanner(System.in);
 
-        if (a == "hello") {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
+        System.out.println("weight");
+        int myWeight = scanner.nextInt();
+        System.out.println(myWeight);
     }
 }
