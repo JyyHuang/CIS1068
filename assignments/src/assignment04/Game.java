@@ -18,17 +18,17 @@ public class Game {
      */
     public static boolean checkWinner(String user, String computer) {
         boolean result = false;
-        if (user == "melltorp" && (computer == "utespelare" || computer == "olserod")) {
+        if (user.equals("melltorp") && (computer.equals("utespelare") || computer.equals("olserod"))) {
             result = true;
-        } else if (user == "utespelare" && (computer == "knarrevik" || computer == "yngvar")) {
+        } else if (user.equals("utespelare") && (computer.equals("knarrevik") || computer.equals("yngvar"))) {
             result = true;
-        } else if (user == "knarrevik" && (computer == "melltorp" || computer == "olserod")) {
+        } else if (user.equals("knarrevik") && (computer.equals("melltorp") || computer.equals("olserod"))) {
             result = true;
-        } else if (user == "olserod" && (computer == "yngvar" || computer == "utespelare")) {
+        } else if (user.equals("olserod") && (computer.equals("yngvar") || computer.equals("utespelare"))) {
             result = true;
-        } else if (user == "yngvar" && (computer == "melltorp" || computer == "knarrevik")) {
+        } else if (user.equals("yngvar") && (computer.equals("melltorp") || computer.equals("knarrevik"))) {
             result = true;
-        } else if (user == computer) {
+        } else if (user.equals(computer)) {
             return result;
         }
         return result;
@@ -52,14 +52,13 @@ public class Game {
      *      else return input
      *  }
      */
-    public static String userMove(String[] choices) {
-        Scanner scanner = new Scanner(System.in);
+    public static String userMove(String[] choices, Scanner scanner) {
 
         while (true) {
             System.out.println("Enter a move:");
             String choice = scanner.nextLine();
             if (Arrays.asList(choices).contains(choice.toLowerCase())) {
-                return choice;
+                return choice.toLowerCase();
             }
         }
     }
@@ -73,8 +72,8 @@ public class Game {
      *      prints computer move, user move, and winner
      *  }
      */
-    public static boolean playRound(String[] choices) {
-        String userChoice = userMove(choices);
+    public static boolean playRound(String[] choices, Scanner scanner) {
+        String userChoice = userMove(choices, scanner);
         String computerChoice = computerMove(choices);
         
         System.out.println("Your Move: " + userChoice.substring(0, 1).toUpperCase() + userChoice.substring(1));
@@ -105,7 +104,9 @@ public class Game {
                         "The computer wins in the event of a tie.");
     }
 
+    
     public static void main(String[] args) {
+
         rules();
 
         Scanner scanner = new Scanner(System.in);
@@ -126,10 +127,10 @@ public class Game {
 
         while (true) {
             System.out.println("Would you like to play a round?");
-
             String answer = scanner.nextLine();
+            
             if (answer.equals("y")) {
-                boolean thisRound = playRound(choices);
+                boolean thisRound = playRound(choices, scanner);
                 if (thisRound == true) {
                     System.out.println("You won this round!");
                     userWins++;
