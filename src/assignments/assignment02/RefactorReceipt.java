@@ -1,3 +1,4 @@
+package assignments.assignment02;
 // Joey Huang
 // CIS1068 Section 003
 // 09/11/2023

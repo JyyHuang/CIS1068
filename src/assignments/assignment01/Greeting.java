@@ -1,3 +1,4 @@
+package assignments.assignment01;
 // Joey Huang
 // 08/28/2023
 // Assignment 1. Greetings

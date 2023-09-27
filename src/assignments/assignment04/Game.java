@@ -1,4 +1,4 @@
-package assignment04;
+package assignments.assignment04;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -104,27 +104,26 @@ public class Game {
                         "The computer wins in the event of a tie.");
     }
 
-    
-    public static void main(String[] args) {
+    /* Game Summary
+     * 
+     * print rounds, user wins, and computer wins
+     */
+    public static void gameSummary(int rounds, int userWins, int computerWins){
+        System.out.println("Rounds Played:" + rounds);
+        System.out.println("User Wins:" + userWins);
+        System.out.println("Computer Wins:" + computerWins);
+    }
 
-        rules();
-
-        Scanner scanner = new Scanner(System.in);
-
-        /* Ask For a Round
-         * 
-         * while true{
-         *   Scanner
-         *   if y -> playRound()
-         *   if n -> break
-         * }
-         */
-        String[] choices = { "olserod", "knarrevik", "utespelare", "yngvar", "melltorp" };
-
-        int rounds = 0;
-        int userWins = 0;
-        int computerWins = 0;
-
+    /* Ask to Play
+     * 
+     * while true {
+     *  if y -> playRound
+     *     if round == true -> user wins
+     *      else -> computer wins
+     *  if n -> break
+     * }
+     */
+    public static void askUser(Scanner scanner, String[] choices, int rounds, int userWins, int computerWins){
         while (true) {
             System.out.println("Would you like to play a round?");
             String answer = scanner.nextLine();
@@ -143,9 +142,27 @@ public class Game {
                 break;
             }
         }
+        gameSummary(rounds, userWins, computerWins);
+    }
 
-        System.out.println("Rounds Played:" + rounds);
-        System.out.println("User Wins:" + userWins);
-        System.out.println("Computer Wins:" + computerWins);
+    /* main
+     * 
+     * print rules
+     * initialize variables,array, and scanner
+     * ask user if they want to play
+     * 
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        rules();
+
+        String[] choices = { "olserod", "knarrevik", "utespelare", "yngvar", "melltorp" };
+
+        int rounds = 0;
+        int userWins = 0;
+        int computerWins = 0;
+
+        askUser(scanner, choices, rounds, userWins, computerWins);
     }
 }

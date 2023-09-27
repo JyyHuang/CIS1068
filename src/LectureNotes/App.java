@@ -1,8 +1,8 @@
-import java.util.Scanner;
+package LectureNotes;
 
 public class App {
 
     public static void main(String[] args) {
-        
+        System.out.println("hello World");
     }
 }

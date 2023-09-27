@@ -1,8 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "src/assignment02",
-        "src/assignment01",
-        "src/assignment03"
+        "src"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
