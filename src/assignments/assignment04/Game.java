@@ -4,6 +4,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
+/*Joey Huang
+ * CIS1068
+ * Section 003
+ * 09/28/2023
+ * Assignment 3. Game
+ * 
+ * This program is a game between the user and computer. After user enters n, the game summary will be printed.
+ */
 public class Game {
 
     /* Check the Winner
