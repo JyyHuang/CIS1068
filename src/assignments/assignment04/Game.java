@@ -8,7 +8,7 @@ import java.util.Random;
  * CIS1068
  * Section 003
  * 09/28/2023
- * Assignment 3. Game
+ * Assignment 4. Game
  * 
  * This program is a game between the user and computer. After user enters n, the game summary will be printed.
  */
