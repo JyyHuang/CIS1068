@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 10/13/2023
  * Assignment 6. Game
  * 
- * This program 
+ * This program takes a txt file as input and outputs a html file
  */
 public class Webify {
     
