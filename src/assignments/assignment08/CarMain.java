@@ -9,11 +9,11 @@ public class CarMain {
 
         cars[0].fillTank(2);
         cars[0].drive(10);
-        System.out.println(cars[0]);
+        System.out.println(cars[0]); 
 
         cars[1].fillTank(5);
-        System.out.println(cars[1]);
+        System.out.println(cars[1]); // prints the fuel capacity since it is over the max
 
-        System.out.println(cars[2].getFuelRemaining());
+        System.out.println(cars[2].getFuelRemaining()); // prints 9
     }
 }
