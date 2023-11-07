@@ -9,7 +9,4 @@ public class App {
         this.y = y;
     }
 
-    public String toString(){
-        return "("+ x +"," +y+")";
-    }
 }
