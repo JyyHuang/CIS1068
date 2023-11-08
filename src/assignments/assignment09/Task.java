@@ -8,10 +8,10 @@ public class Task {
 
     public Task(String name, int priority, int estMinsToComplete, java.time.LocalDateTime whenDue){
         if (priority < 0){
-            throw new IllegalArgumentException("Priority needs to be positive!");
+            throw new IllegalArgumentException("Priority needs to be positive");
         }
         if (estMinsToComplete < 0){
-            throw new IllegalArgumentException("EstMinsToComplete needs to be positive!");
+            throw new IllegalArgumentException("EstMinsToComplete needs to be positive");
         }
         this.name = name;
         this.priority = priority;
@@ -54,14 +54,25 @@ public class Task {
         "Date: " + this.whenDue;
     }
 
-    public void increasePriority(int priority){
-        if (priority < 0){
+    public void increasePriority(int amount){
+        if (amount < 0){
             return;
         }
-        this.priority += priority;
+        this.priority += amount;
     }
 
-    public void decreasePriority(int priority){
-        
+    public void decreasePriority(int amount){
+        if (amount > this.priority){
+            this.priority = 0;
+        } else{
+            this.priority -= amount;
+        }
+    }
+
+    public boolean overdue(){
+        if (java.time.LocalDateTime.now().isAfter(this.whenDue)){
+            return true;
+        }
+        return false;
     }
 }
