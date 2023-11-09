@@ -47,8 +47,8 @@ public class HoneyDoList {
         } 
         else
         {
-        tasks[numTasks] = newTask;
-        numTasks += 1;
+            tasks[numTasks] = newTask;
+            numTasks += 1;
         }
     }
 
