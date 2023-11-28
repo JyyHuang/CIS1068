@@ -1,5 +1,7 @@
 package assignments.assignment10;
 
+import java.io.FileNotFoundException;
+
 public class Driver {
 
     public static Test createTest(){
@@ -16,9 +18,12 @@ public class Driver {
         return test;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException{
         Test test = createTest();
         System.out.println(test.toString());
         System.out.println(test.toAnswerString());
+
+        test.sendToFileQuestions("questions.txt");
+        test.sendToFileAnswers("answers.txt");
     }
 }

@@ -13,6 +13,6 @@ public class FillInTheBlankQuestion extends ObjectiveQuestion {
 
     @Override
     public String toAnswerString(){
-        return toString() + "Answer: " + "___" + correctAnswer +"___" + questionText + "\n";
+        return toString() + "Answer: " + "___" + correctAnswer + "___ " + questionText + "\n";
     }
 }
