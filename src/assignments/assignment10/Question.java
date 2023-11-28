@@ -20,6 +20,6 @@ public class Question {
 
     @Override
     public String toString(){
-        return questionText;
+        return questionText + "\n";
     }
 }   

@@ -8,11 +8,11 @@ public class FillInTheBlankQuestion extends ObjectiveQuestion {
 
     @Override
     public String toString(){
-        return "______ " + questionText;
+        return "______ " + questionText + "\n";
     }
 
     @Override
-    public String getAnswer(){
-        return toString() + "\n" + "Answer: " + "___" + correctAnswer +"___" + questionText;
+    public String toAnswerString(){
+        return toString() + "Answer: " + "___" + correctAnswer +"___" + questionText + "\n";
     }
 }

@@ -8,7 +8,7 @@ public class ObjectiveQuestion extends Question {
         this.correctAnswer = correctAnswer;
     }
 
-    public String getAnswer(){
-        return questionText + "\n" + "Answer: " + correctAnswer;
+    public String toAnswerString(){
+        return questionText + "\n" + "Answer: " + correctAnswer + "\n";
     }
 }
