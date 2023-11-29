@@ -5,8 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
 public class Test {
-    private ObjectiveQuestion[] questions;
-    private double totalPoints;
+    protected ObjectiveQuestion[] questions;
+    protected double totalPoints;
+
     public Test(ObjectiveQuestion[] questions){
         this.questions = questions;
         for (int i = 0; i < questions.length; i++){
@@ -17,13 +18,14 @@ public class Test {
     @Override
     public String toString(){
         String testQuestions = "";
+        testQuestions += "Total Points: " + totalPoints + "\n";
         for (int i = 0; i < questions.length; i++){
             testQuestions += questions[i].toString();
         }
         return testQuestions;
     }
 
-    public String toAnswerString(){
+    public String answerKey(){
         String testAnswers = "";
         for (int i = 0; i < questions.length; i++){
             testAnswers += questions[i].toAnswerString();
@@ -38,6 +40,6 @@ public class Test {
 
     public void sendToFileAnswers(String filename) throws FileNotFoundException {
         PrintStream file = new PrintStream(new File(filename));
-        file.println(toAnswerString());
+        file.println(answerKey());
     }
 }

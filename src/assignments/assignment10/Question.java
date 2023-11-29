@@ -18,8 +18,15 @@ public class Question {
         this.questionText = questionText;
     }
 
+    protected String printLines(){
+        String str = "";
+        for (int i = 0; i <= answerSpace; i++){
+            str += "\n";
+        }
+        return str;
+    }
     @Override
     public String toString(){
-        return questionText + "\n";
+        return questionText + printLines();
     }
 }   

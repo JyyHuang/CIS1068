@@ -8,7 +8,7 @@ public class FillInTheBlankQuestion extends ObjectiveQuestion {
 
     @Override
     public String toString(){
-        return "______ " + questionText + "\n";
+        return "______ " + questionText + printLines();
     }
 
     @Override

@@ -9,6 +9,6 @@ public class ObjectiveQuestion extends Question {
     }
 
     public String toAnswerString(){
-        return questionText + "\n" + "Answer: " + correctAnswer + "\n";
+        return toString() + "Answer: " + correctAnswer + "\n";
     }
 }
